@@ -1,13 +1,3 @@
-import styled, { css } from 'styled-components';
-
-const StyledSidebar = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 360px;
-  height: 100%;
-  background-color: rgba(242, 242, 242, 0.8);
-  z-index: 100;
-`;
-
-export { StyledSidebar };
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2e4cd589ac73b4444b47cd69266436558602dbcb582eeedaaa7a8685fab41c2
+size 669
