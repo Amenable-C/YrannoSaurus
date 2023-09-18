@@ -1,18 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import Expo from './pagecomponents/expopage';
-import Dinosaur from './pagecomponents/dinosaurpage';
-
-function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/Expo" element={<Expo />} />
-        <Route path="/Dinosaur" element={<Dinosaur />} />
-      </Routes>
-    </div>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:592f25eaa77d5f332c72d3358068565ab0309d3e4636ed14aab8b1e439dbc99c
+size 514
