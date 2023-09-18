@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a519b67aacf29f2c77875c98b7d5a790d2d81dac9744dc8566c5d152013f9246
-size 896
+import React from 'react';
+import DsFirstPage from './components/firstpage';
+import { StyledDsPage, StyledDsLandingPage, StyledDsFirstPage } from './Dinosaur.styled';
+import LandingPage from './components/landingpage';
+
+const Dinosaur = () => {
+  return (
+    <StyledDsPage>
+      <StyledDsLandingPage>
+        <LandingPage></LandingPage>
+      </StyledDsLandingPage>
+      <StyledDsFirstPage>
+        <DsFirstPage></DsFirstPage>
+      </StyledDsFirstPage>
+    </StyledDsPage>
+  );
+};
+
+export default Dinosaur;

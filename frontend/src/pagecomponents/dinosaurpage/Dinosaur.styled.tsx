@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e782645e9415ec74d3e111f4ca6531b4787aa33d631584fb5efb0ae885a312cb
-size 711
+import styled from 'styled-components';
+
+const StyledDsPage = styled.div`
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+`;
+
+const StyledDsLandingPage = styled.div`
+  scroll-snap-align: start;
+`;
+
+const StyledDsFirstPage = styled.div`
+  scroll-snap-align: start;
+`;
+
+export { StyledDsPage, StyledDsLandingPage, StyledDsFirstPage };
