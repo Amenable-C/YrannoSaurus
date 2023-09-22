@@ -1,22 +1,3 @@
-package com.e102.dinosaur.controller.place.request;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Getter
-public class FestivalRequest {
-    
-    private String name;
-    private LocalDate startDate;
-    private LocalDateTime startTime;
-    private int placeId;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51ded33fa019969cf1f921478e96cbfbdd70779a5848df0e06f370cf960aa13f
+size 725
