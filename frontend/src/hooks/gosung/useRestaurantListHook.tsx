@@ -1,12 +1,3 @@
-import { async } from 'q';
-import { useState } from 'react';
-import restaurantListGet from '../../apis/restaurant/restaurantListGet';
-
-export const useRestaurantListHook = () => {
-  const [restaurantList, setRestaurantList] = useState([]);
-  const getrestaurantList = async (tourId: any) => {
-    const res = await restaurantListGet(tourId);
-    setRestaurantList(res.data.response);
-  };
-  return { restaurantList, getrestaurantList };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:7904d12d88a90be8dd41f30ea3fa448f0df1b5d01ff0ea8391d3ac63007a04cb
+size 655
