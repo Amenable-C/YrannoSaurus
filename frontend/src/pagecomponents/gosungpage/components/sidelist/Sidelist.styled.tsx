@@ -1,21 +1,3 @@
-import styled from 'styled-components';
-
-const StyledSideListContainer = styled.div`
-  min-width: 360px;
-  max-width: 360px;
-  flex-direction: column;
-  display: flex;
-  align-items: start;
-`;
-
-const StyledMenu = styled.div`
-  color: ${(props) => props.theme.colors.main};
-  font-family: ${(props) => props.theme.fonts.boldfont};
-  font-size: 25px;
-  height: 100px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-`;
-
-export { StyledSideListContainer, StyledMenu };
+version https://git-lfs.github.com/spec/v1
+oid sha256:a179423c5ce7a3a26bff887ef61ac91a9c5d907b7392ccea1fba667805f553da
+size 591
