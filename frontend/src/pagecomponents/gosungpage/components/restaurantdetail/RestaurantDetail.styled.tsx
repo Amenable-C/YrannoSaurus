@@ -1,13 +1,3 @@
-import styled from 'styled-components';
-
-const StyledRestaurantDetailContainer = styled.div`
-  height: 100%;
-  width: 770px;
-  display: flex;
-  position: absolute;
-  z-index: 2;
-  /* border: 1px solid black; */
-  background-color: ${(props) => props.theme.colors.white};
-`;
-
-export { StyledRestaurantDetailContainer };
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eb6433b8cd5f936ed6089a9601e39400a64f53c9b87d2638e880c2da46ee801
+size 1695
