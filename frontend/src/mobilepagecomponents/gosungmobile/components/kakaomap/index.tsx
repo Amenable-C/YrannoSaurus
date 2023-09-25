@@ -1,22 +1,3 @@
-import React from 'react';
-import { Map } from 'react-kakao-maps-sdk';
-import { StyledKakaoMapContainer } from './KakaoMap.styled';
-
-const GosungKakaoMapComponent = () => {
-  return (
-    <Map
-      id="map"
-      center={{
-        lat: 35.057175,
-        lng: 128.3975,
-      }}
-      style={{
-        width: '100vw',
-        height: '100vh',
-      }}
-      level={4}
-    />
-  );
-};
-
-export default GosungKakaoMapComponent;
+version https://git-lfs.github.com/spec/v1
+oid sha256:62abc2134d7d4489ecec854ecb0a2f03443c2cab128667ded300bc3b404faa24
+size 3620
