@@ -1,18 +1,3 @@
-import { create } from 'zustand';
-
-const useGuideStore = create((set) => ({
-  selectCategory: '',
-  setSelectCategory: (data: any) =>
-    set((state: any) => ({
-      selectCategory: data,
-    })),
-
-  place: [], // 편의시설에서 선택 시 해당 정보가 담기는 곳
-  setPlace: (data: any) =>
-    set((state: any) => ({
-      place: data,
-    })),
-  resetPlace: () => set(() => ({ place: [] })),
-}));
-
-export default useGuideStore;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4f6ff1eaad6f5ef681162b249cba0c2302b99f9c8bf86a5cdbeec52a3b15283
+size 970
