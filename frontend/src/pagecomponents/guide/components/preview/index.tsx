@@ -1,17 +1,3 @@
-import React, { useEffect } from 'react';
-import { StyledMenuContainer, StyledMenuTitle } from '../../Guide.styled';
-import { useFestivalListHook } from '../../../../hooks/guide/useFestivalListHook';
-
-const Preview = () => {
-  const { getFestivalList } = useFestivalListHook();
-  useEffect(() => {
-    getFestivalList();
-  }, []);
-  return (
-    <StyledMenuContainer>
-      <StyledMenuTitle>관람 요소</StyledMenuTitle>
-    </StyledMenuContainer>
-  );
-};
-
-export default Preview;
+version https://git-lfs.github.com/spec/v1
+oid sha256:65747895906d177c919a283593517bd8ffd3f44e70f52bdbe409fe1ace32bd00
+size 1597
