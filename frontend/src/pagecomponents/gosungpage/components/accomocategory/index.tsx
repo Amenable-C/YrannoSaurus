@@ -1,14 +1,3 @@
-import React from 'react';
-import { StyledAccomoCategoryList, StyledAccomoCategoryWrap } from './AccomoCategory.styled';
-
-const GosungAccomoCategory = () => {
-  return (
-    <StyledAccomoCategoryWrap>
-      <StyledAccomoCategoryList>모텔</StyledAccomoCategoryList>
-      <StyledAccomoCategoryList>펜션</StyledAccomoCategoryList>
-      <StyledAccomoCategoryList>게스트하우스</StyledAccomoCategoryList>
-    </StyledAccomoCategoryWrap>
-  );
-};
-
-export default GosungAccomoCategory;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7ded412a7c154832667217d7018fe10981c9463e9335cea121ecd4dc7aca243
+size 1822
