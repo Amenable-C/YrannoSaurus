@@ -1,29 +1,3 @@
-export type PositionType =
-  | {
-      lat: number;
-      lng: number;
-    }
-  | undefined;
-
-export interface Festival {
-  id: number;
-  name: string;
-  startTime: string;
-  placeName: string;
-}
-
-export interface Place {
-  id: number;
-  name: string;
-  longitude: string;
-  latitude: string;
-  markerNumber: number;
-  imgAddress: string;
-  content: string;
-  type: string;
-}
-
-export interface EnrollShowPropsType {
-  place: Place | null;
-  festivals: Festival[];
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:63606c306050262a7b43a3dd3badbaf264168f3f86267bf347a3062da4552ea6
+size 882
