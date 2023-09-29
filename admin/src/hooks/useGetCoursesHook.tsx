@@ -1,20 +1,3 @@
-import { useEffect, useState } from 'react';
-import coursesGet from '../apis/course/coursesGet';
-
-export const useGetCoursesHook = () => {
-  const [places, setPlaces] = useState<any>([]);
-
-  useEffect(() => {
-    const fetchList = async () => {
-      try {
-        const data = await coursesGet();
-        setPlaces(data);
-      } catch (error) {
-        // console.error('Error fetching places:', error);
-      }
-    };
-    fetchList();
-  }, []);
-
-  return places;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:9eb7c98958dbbe6e1c72530f515974668d3ee36a924853fde5cc7079f600a4de
+size 588
