@@ -1,21 +1,3 @@
-import { useEffect, useState } from 'react';
-import showsGet from '../apis/show/showsGet';
-
-export const useGetShowsHook = () => {
-  const [places, setPlaces] = useState<any>([]);
-
-  useEffect(() => {
-    const fetchList = async () => {
-      try {
-        const data = await showsGet();
-        setPlaces(data);
-        // console.log(data);
-      } catch (error) {
-        // console.error('Error fetching places:', error);
-      }
-    };
-    fetchList();
-  }, []);
-
-  return places;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e52f7baa90bdfd6fb2d0031846591e05fed663b45bd3f98217377362cb38323
+size 637
