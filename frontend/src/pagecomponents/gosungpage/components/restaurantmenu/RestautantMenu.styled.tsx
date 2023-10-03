@@ -1,15 +1,3 @@
-import styled from 'styled-components';
-
-const StyledMenuContainer = styled.div``;
-
-const StyledMenuText = styled.div`
-  font-family: ${(props) => props.theme.fonts.boldfont};
-  color: ${(props) => props.theme.color.main};
-`;
-
-const StyledMenu = styled.div`
-  display: flex;
-  font-family: ${(props) => props.theme.fonts.regularfont};
-`;
-
-export { StyledMenuContainer, StyledMenuText, StyledMenu };
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fbf6c1d63daf66364f01e78d37605a926ac55ab8ed9ead51141e9b03918782a
+size 943
