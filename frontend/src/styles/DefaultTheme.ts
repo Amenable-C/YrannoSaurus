@@ -1,22 +1,3 @@
-import { DefaultTheme } from 'styled-components';
-
-const theme: DefaultTheme = {
-  colors: {
-    main: '#599198',
-    light: '#9CC0C4',
-    white: '#F3F8F8',
-    black: '#1E2B2E',
-    lightgray: '#E4E7EC',
-    gray: 'rgba(0, 0, 0, 0.50)',
-    night: '#000020',
-    menu: '#E0ECED',
-  },
-  fonts: {
-    dinolightfont: 'dinolightfont',
-    dinoregularfont: 'dinoregularfont',
-    dinoboldfont: 'dinoboldfont',
-    regularfont: 'regularfont',
-    boldfont: 'boldfont',
-  },
-};
-export default theme;
+version https://git-lfs.github.com/spec/v1
+oid sha256:38c11d9f83f882dc34d16c8475ea5ae792a2c581f720a2f4e2168131c4f3acfb
+size 517
