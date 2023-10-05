@@ -1,19 +1,3 @@
-import styled from 'styled-components';
-
-const StyledCloseButton = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
-  width: 30px;
-  height: 60px;
-  border: 1px solid lightgray;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  display: flex;
-  overflow: hidden;
-  z-index: 3;
-  position: absolute;
-  cursor: pointer;
-  top: 50%;
-`;
-
-export { StyledCloseButton };
+version https://git-lfs.github.com/spec/v1
+oid sha256:1df5df111cb549eeca75185e70659cf4af717db139ccd7b324e82a00168107b1
+size 907
