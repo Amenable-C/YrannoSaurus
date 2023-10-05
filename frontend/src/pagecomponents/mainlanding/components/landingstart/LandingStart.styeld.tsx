@@ -1,16 +1,3 @@
-import styled from 'styled-components';
-
-const StyledLandingStartPage = styled.div`
-  height: 100vh;
-  background-color: #000020;
-`;
-
-const StyledLandingStartPageLogo = styled.img.attrs<any>((props) => ({
-  src: props.src,
-  alt: props.alt,
-}))`
-  padding-top: 20rem;
-  width: 40rem;
-`;
-
-export { StyledLandingStartPage, StyledLandingStartPageLogo };
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd61e139d60ec179b7338844f3563e3f8a171c5c6a79872ae5ac57442489c6f2
+size 596
