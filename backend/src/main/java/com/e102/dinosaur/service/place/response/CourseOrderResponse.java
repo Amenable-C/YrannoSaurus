@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1973dbcda46f373c153f503cfbdf80ef2c9dc010701ad004096c3bc2c8edd61
-size 701
+package com.e102.dinosaur.service.place.response;
+
+
+import com.e102.dinosaur.domain.courseorder.CourseOrder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class CourseOrderResponse {
+
+    private Long id;
+    private int sequence;
+    private PlaceResponse place;
+
+    public static CourseOrderResponse of(CourseOrder courseOrder) {
+        return CourseOrderResponse.builder()
+                .id(courseOrder.getId())
+                .sequence(courseOrder.getSequence())
+                .place(PlaceResponse.of(courseOrder.getPlace()))
+                .build();
+    }
+}

@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce9fd559d4b7f87356ede7fa61722cebdfc23619843b2e60e5e71520b28b937e
-size 641
+import styled from 'styled-components';
+
+const StyledKakaoMapContainer = styled.div`
+  position: relative;
+`;
+
+const StyledMarkerContentContainer = styled.div``;
+
+const StyledPostionContainer = styled.div.attrs<any>((props) => ({}))`
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 100;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+`;
+
+const StyledOnPositionImg = styled.img.attrs<any>((props) => ({
+  src: props.myposition ? '/map/onPositionRed.png' : '/map/onPosition.png',
+}))`
+  width: 100%;
+  height: 100%;
+`;
+
+export { StyledKakaoMapContainer, StyledMarkerContentContainer, StyledPostionContainer, StyledOnPositionImg };

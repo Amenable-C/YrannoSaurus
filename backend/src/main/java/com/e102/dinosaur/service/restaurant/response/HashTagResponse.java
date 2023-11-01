@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3e5ccd199a2d68b5c1dca06f42156fa51dddd025f84643ae1b666fd34cdcbe28
-size 619
+package com.e102.dinosaur.service.restaurant.response;
+
+
+import com.e102.dinosaur.domain.hashtag.HashTag;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+public class HashTagResponse {
+
+    private Long id;
+    private String name;
+
+    @Builder
+    public HashTagResponse(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public static HashTagResponse of(HashTag hashTag) {
+        return HashTagResponse.builder()
+                .id(hashTag.getId())
+                .name(hashTag.getName())
+                .build();
+    }
+}

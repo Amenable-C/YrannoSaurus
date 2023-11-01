@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c123509f12acd6af3e06a7d3530cdcf838e5c54ad9fd6aa15c7fdbcbe183a06b
-size 601
+package com.e102.dinosaur.controller.place.request;
+
+
+import com.e102.dinosaur.domain.course.Course;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Getter
+public class CourseRequest {
+
+    private String name;
+    private int timeTaken;
+    private List<CourseOrderRequest> courseOrderRequestList;
+
+    public Course toEntity() {
+        return Course.builder()
+                .name(name)
+                .timeTaken(timeTaken)
+                .build();
+    }
+}

@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9822a5f758d1996107acb71428d9b26a91abc540542931d4e58947bdd0c4499f
-size 890
+package com.e102.dinosaur.controller.place.request;
+
+import com.e102.dinosaur.domain.place.Place;
+import com.e102.dinosaur.domain.place.PlaceType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PlaceRequest {
+
+    private String name;
+    private String longitude;
+    private String latitude;
+    private String imgAddress;
+    private String content;
+    private PlaceType type;
+    private int markerNumber;
+
+    public Place toEntity() {
+        return Place.builder()
+                .name(name)
+                .longitude(longitude)
+                .latitude(latitude)
+                .imgAddress(imgAddress)
+                .content(content)
+                .type(type)
+                .markerNumber(markerNumber)
+                .build();
+    }
+}

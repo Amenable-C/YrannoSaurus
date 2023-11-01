@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bdc77e4046791f39ff58c86e887ec92f5f08062f02d95ea488b0fecf277044e7
-size 651
+import React, { useState, useRef } from 'react';
+import { StyledTtsBox, StyledTtsAudio } from './TtsPlay.styled';
+
+const TtsPaly = ({ src }: { src: string }) => {
+  const [isPlay, setIsPlay] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlay) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlay(!isPlay);
+    }
+  };
+  return (
+    <StyledTtsBox onClick={togglePlay}>
+      {isPlay ? '■' : '▶'}
+      <StyledTtsAudio ref={audioRef} src={src} />
+    </StyledTtsBox>
+  );
+};
+
+export default TtsPaly;

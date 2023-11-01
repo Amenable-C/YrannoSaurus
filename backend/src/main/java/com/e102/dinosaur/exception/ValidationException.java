@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19c612ce4430566913620cc10ad6385a667066776cf2fe12b80694b21513b679
-size 543
+package com.e102.dinosaur.exception;
+
+import java.util.List;
+import lombok.Getter;
+import org.springframework.validation.FieldError;
+
+@Getter
+public class ValidationException extends RuntimeException {
+
+    private List<FieldError> fieldErrors;
+
+    public ValidationException() {
+    }
+
+    public ValidationException(String message) {
+        super(message); // RuntimeException 클래스의 생성자를 호출합니다.
+    }
+
+    public ValidationException(List<FieldError> fieldErrors) {
+        this.fieldErrors = fieldErrors;
+    }
+
+}

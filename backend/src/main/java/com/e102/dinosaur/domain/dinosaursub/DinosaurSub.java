@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b53f47b0b8631a7910ef6c0106b8dcae8785b77c4db3446bedab53febf4a140
-size 1273
+package com.e102.dinosaur.domain.dinosaursub;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity
+public class DinosaurSub {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String continent;
+    private String country;
+    private String decimalLatitude;
+    private String decimalLongitude;
+    private String scientificName;
+    private String family;
+    private String genus;
+    private String higherClassification;
+
+    public DinosaurSub(String continent, String country, String decimalLatitude,
+            String decimalLongitude,
+            String scientificName, String family, String genus, String higherClassification) {
+        this.continent = continent;
+        this.country = country;
+        this.decimalLatitude = decimalLatitude;
+        this.decimalLongitude = decimalLongitude;
+        this.scientificName = scientificName;
+        this.family = family;
+        this.genus = genus;
+        this.higherClassification = higherClassification;
+    }
+}

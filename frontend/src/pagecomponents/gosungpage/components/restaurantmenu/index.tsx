@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:043dbabdff3551f591776dc20187af4034c4f483c703cbf350d7f212f12d0efa
-size 770
+import React from 'react';
+
+import { StyledMenu, StyledMenuContainer, StyledMenuName, StyledMenuText, StyledPrice } from './RestautantMenu.styled';
+
+interface GosungRestaurantDetailProps {
+  restaurantDetail: { menuResponseList: any[] };
+}
+
+const GosungRestaurantMenu = ({ restaurantDetail }: GosungRestaurantDetailProps) => {
+  return (
+    <StyledMenuContainer>
+      <StyledMenuText>Menu</StyledMenuText>
+      {restaurantDetail.menuResponseList &&
+        restaurantDetail.menuResponseList.map((menu: any) => (
+          <StyledMenu key={menu.id}>
+            <StyledMenuName>{menu.name}</StyledMenuName>
+            <StyledPrice>{menu.price}</StyledPrice>
+          </StyledMenu>
+        ))}
+    </StyledMenuContainer>
+  );
+};
+
+export default GosungRestaurantMenu;

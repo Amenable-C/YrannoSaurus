@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7eef77ac9eee174cbc3819c740b70d36a6daa1c4e238d15d40a1ce1471e4fa2
-size 700
+import styled, { css } from 'styled-components';
+
+const StyledInput = styled.input.attrs<any>((props) => ({
+  value: props.value || '',
+  placeholder: props.placeholder || null,
+}))`
+  ${(props) => {
+    const font = props.theme.fonts.regularfont;
+    const black = props.theme.colors.black;
+    const main = props.theme.colors.main;
+    const white = props.theme.colors.white;
+
+    return css`
+      font-family: ${font};
+      font-size: 15px;
+      width: 100%;
+      height: 100%;
+      color: ${black};
+      background-color: ${white};
+      border: 1.7px solid ${main};
+      &:focus {
+        outline: none;
+        border: solid 2px ${main};
+      }
+    `;
+  }};
+`;
+
+export { StyledInput };

@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b563833f4fab031d8c1dd52e63561d8ccf74d52d0824c28152759975bfddeb5
-size 889
+package com.e102.dinosaur.service.place.response;
+
+import com.e102.dinosaur.domain.course.Course;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class CourseResponse {
+
+    private Long id;
+    private String name;
+    private int timeTaken;
+    private List<CourseOrderResponse> courseOrderList;
+
+    public static CourseResponse of(Course course) {
+        return CourseResponse.builder()
+                .id(course.getId())
+                .name(course.getName())
+                .timeTaken(course.getTimeTaken())
+                .courseOrderList(course.getCourseOrderList()
+                        .stream()
+                        .map(CourseOrderResponse::of)
+                        .toList())
+                .build();
+    }
+
+}

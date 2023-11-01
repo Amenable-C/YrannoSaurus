@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0827305d867237a3216c98ea2654ab0c0a8df7b0b999541aad0a0409f49f4a3a
-size 883
+import styled from 'styled-components';
+
+const StyledKakaoMapContainer = styled.div`
+  position: relative;
+`;
+
+const StyledMarkerContainer = styled.div``;
+
+const StyledInfoWindow = styled.div`
+  padding: 5px;
+  border: 3px solid ${(props) => props.theme.colors.main};
+  background-color: ${(props) => props.theme.colors.white};
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: ${(props) => props.theme.fonts.regularfont};
+`;
+
+const StyledInfoDetailWindow = styled.div`
+  padding: 5px;
+  border: 3px solid ${(props) => props.theme.colors.light};
+  background-color: ${(props) => props.theme.colors.main};
+  border-radius: 10px;
+  color: ${(props) => props.theme.colors.white};
+  font-size: 13px;
+  font-family: ${(props) => props.theme.fonts.regularfont};
+  z-index: 10;
+`;
+
+export { StyledKakaoMapContainer, StyledInfoWindow, StyledMarkerContainer, StyledInfoDetailWindow };

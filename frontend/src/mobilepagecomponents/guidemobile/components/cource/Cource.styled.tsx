@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:155a84e3192decfc4716799c01517caa847741616c1991313957d77b83c063e8
-size 1199
+import styled from 'styled-components';
+
+const StyldTourCategoryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledTourCategoryButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px 0px 20px;
+  max-height: 20vh;
+  overflow: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+`;
+
+const StyledTourCategoryButton = styled.button.attrs<any>((props) => ({}))`
+  border-radius: 20px;
+  background-color: ${(props) => (props.name === props.select ? props.theme.colors.white : props.theme.colors.main)};
+  color: ${(props) => (props.name === props.select ? props.theme.colors.black : props.theme.colors.white)};
+  font-size: 13px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: ${(props) => (props.name === props.select ? `2px solid ${props.theme.colors.black}` : 'hidden')};
+  /* width: 100px; */
+  /* flex: 1; */
+
+  font-family: ${(props) => props.theme.fonts.boldfont};
+`;
+
+export { StyldTourCategoryContainer, StyledTourCategoryButtonContainer, StyledTourCategoryButton };

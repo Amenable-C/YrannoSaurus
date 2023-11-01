@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:747e1bee5a91b82b57300c4df8b12a818e9d34094eaa586ff02c5e31fb22d717
-size 1044
+import styled, { css } from 'styled-components';
+
+const StyledSubTitle = styled.div.attrs<any>((props) => ({}))`
+  ${(props) => {
+    const font = props.theme.fonts.boldfont;
+
+    return css`
+      font-family: ${font};
+      font-size: 18px;
+      margin-bottom: 10px;
+    `;
+  }}
+`;
+const StyledBox = styled.div.attrs<any>((props) => ({}))`
+  ${(props) => {
+    const font = props.theme.fonts.regularfont;
+    const black = props.theme.colors.black;
+    const main = props.theme.colors.main;
+    const white = props.theme.colors.white;
+
+    return css`
+      font-family: ${font};
+      font-size: 15px;
+      line-height: 35px;
+      height: 35px;
+      width: 100%;
+      color: ${black};
+      background-color: ${white};
+      border: 1.7px solid ${main};
+      margin-bottom: 5px;
+    `;
+  }}
+`;
+const StyledFestivalList = styled.div.attrs<any>((props) => ({}))`
+  ${(props) => {
+    return css`
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    `;
+  }}
+`;
+
+export { StyledBox, StyledFestivalList, StyledSubTitle };

@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:429ee360565631e7f4095955f5b6a3cc4c8c814e534d562623c2e40190314ffc
-size 1200
+package com.e102.dinosaur.config;
+
+import com.e102.dinosaur.domain.elasticsearchanimal.ElasticSearchAnimal;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.client.ClientConfiguration;
+import org.springframework.data.elasticsearch.client.RestClients;
+import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfiguration;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+
+@Configuration
+@EnableElasticsearchRepositories(basePackageClasses = {ElasticSearchAnimal.class})
+public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
+
+    @Value("${elasticsearch.host}")
+    private String host;
+
+    @Value("${elasticsearch.port}")
+    private int port;
+
+    @Override
+    public RestHighLevelClient elasticsearchClient() {
+        ClientConfiguration clientConfiguration = ClientConfiguration.builder()
+                .connectedTo(host + ":" + port)
+                .build();
+        return RestClients.create(clientConfiguration).rest();
+    }
+}

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2be8bca0462a33e2dc78dacf88d3830bc888fab7bd5fb007cbeb3175bc63912e
-size 556
+import useGosungListStore from '../../stores/mobilegosung/useGosungListStore';
+import lodgmentListGet from '../../apis/lodgment/lodgmentListGet';
+
+export const useLodgmentListHook = () => {
+  // const [restaurantList, setRestaurantList] = useState([]);
+  const lodgment = useGosungListStore((state: any) => state.lodgment);
+  const setLodgment = useGosungListStore((state: any) => state.setLodgment);
+  const getlodgmentList = async () => {
+    const res = await lodgmentListGet();
+    setLodgment(res.data.response);
+  };
+  return { getlodgmentList };
+};

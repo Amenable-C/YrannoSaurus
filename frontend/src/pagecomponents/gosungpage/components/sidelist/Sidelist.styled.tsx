@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d0dee256ffb5cf459344922940cbb8d5dec3a547d97255ab20901b835568c11
-size 668
+import styled from 'styled-components';
+
+const StyledSideListContainer = styled.div`
+  min-width: 410px;
+  max-width: 410px;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+  /* position: absolute; */
+  z-index: 3;
+  background-color: ${(props) => props.theme.colors.white};
+  border-right: 2px solid ${(props) => props.theme.colors.lightgray};
+`;
+
+const StyledMenu = styled.div`
+  color: ${(props) => props.theme.colors.main};
+  font-family: ${(props) => props.theme.fonts.boldfont};
+  font-size: 30px;
+  height: 100px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+export { StyledSideListContainer, StyledMenu };

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e851b7b0caac967775d578bb8fb9875a63643da380b3752e4bf85c2688f3e360
-size 632
+import React from 'react';
+import {
+  StyledMenuContainer,
+  StyledServiceName,
+  StyledNavBarContainer,
+  StyledMenu,
+  StyledRightMenu,
+} from './NavBar.styled';
+
+const NavbarComponent = (props: any) => {
+  return (
+    <StyledNavBarContainer>
+      <StyledMenuContainer>
+        <StyledMenu src="mobile/mainlogodark.png" alt="menu"></StyledMenu>
+      </StyledMenuContainer>
+      <StyledRightMenu>
+        <StyledServiceName href="/Guide">Expo</StyledServiceName>
+        <StyledServiceName href="/Gosung">고성</StyledServiceName>
+      </StyledRightMenu>
+    </StyledNavBarContainer>
+  );
+};
+
+export default NavbarComponent;

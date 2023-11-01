@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60dd6fca70dfcf9e4a9353426f3bf1d708362c34e523a93e34bd60050480a63b
-size 535
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "types": ["kakao.maps.d.ts"]
+}

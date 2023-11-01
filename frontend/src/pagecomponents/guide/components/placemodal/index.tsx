@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6bd2bd86ac49c97d32696a2bf18de98e918a8b760453aa7b611022da086c0699
-size 1336
+import useGuideStore from '../../../../stores/guide/useGuideStore';
+import {
+  Modal,
+  ModalWindow,
+  ModalContainer,
+  ModalTopContainer,
+  ModalImage,
+  ModalTopTitle,
+  StyledCloseButton,
+  StyledContentContainer,
+  StyeldContent,
+  StyledCloseButtonContainer,
+  StyledCloseButtonBox,
+  StyledImgaContainer,
+  StyledMenuReviewContainer,
+} from './PlaceModal.styled';
+
+const PlaceModal = (props: any) => {
+  const src = props.place.imgAddress ? props.place.imgAddress : '/map/xdino.png';
+  return (
+    <Modal>
+      <ModalWindow>
+        <ModalContainer>
+          <StyledCloseButtonContainer>
+            <StyledCloseButtonBox onClick={props.handleOpen}>
+              <StyledCloseButton></StyledCloseButton>
+            </StyledCloseButtonBox>
+          </StyledCloseButtonContainer>
+          <ModalTopContainer>
+            <ModalTopTitle>{props.place.name}</ModalTopTitle>
+          </ModalTopContainer>
+          <StyledMenuReviewContainer>
+            <StyledContentContainer>
+              <StyeldContent>{props.place.content}</StyeldContent>
+            </StyledContentContainer>
+            <StyledImgaContainer>
+              <ModalImage src={src} />
+            </StyledImgaContainer>
+          </StyledMenuReviewContainer>
+        </ModalContainer>
+      </ModalWindow>
+    </Modal>
+  );
+};
+
+export default PlaceModal;

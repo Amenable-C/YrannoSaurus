@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8bf92a5f21a9c7339303dcaa3929d3365fd7ea35e79eb6b39e5c1045fb67e9a4
-size 1223
+import { StyledBox, StyledSubTitle } from './CourseInfo.styled';
+import useCourseStore from '../../../../../stores/course/useCourseStore';
+
+const CourseInfo = () => {
+  const { selectedCourse } = useCourseStore();
+
+  return (
+    <div>
+      {selectedCourse && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div>
+            <StyledSubTitle>코스 이름</StyledSubTitle>
+            <StyledBox>
+              <div style={{ paddingLeft: '15px' }}>{selectedCourse.name}</div>
+            </StyledBox>
+          </div>
+          <div>
+            <StyledSubTitle>소요시간</StyledSubTitle>
+            <StyledBox>
+              <div style={{ paddingLeft: '15px' }}>{selectedCourse.timeTaken}</div>
+            </StyledBox>
+          </div>
+          <div>
+            <StyledSubTitle>장소 순서</StyledSubTitle>
+            <ul>
+              {selectedCourse.courseOrderList.map((order: any) => (
+                <StyledBox key={order.id}>
+                  <div style={{ paddingLeft: '15px' }}>{order.place.name}</div>
+                </StyledBox>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CourseInfo;

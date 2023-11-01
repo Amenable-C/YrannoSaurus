@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45c01018d8db08ec9808e30fb36236ee6f3942b7f163e4fae9bc657700b3cf4c
-size 1258
+package com.e102.dinosaur.domain.animal;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity
+public class Animal {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String continent;
+    private String country;
+    private String decimalLatitude;
+    private String decimalLongitude;
+    private String scientificName;
+    private String family;
+    private String genus;
+    private String higherClassification;
+
+    public Animal(String continent, String country, String decimalLatitude,
+            String decimalLongitude,
+            String scientificName, String family, String genus, String higherClassification) {
+        this.continent = continent;
+        this.country = country;
+        this.decimalLatitude = decimalLatitude;
+        this.decimalLongitude = decimalLongitude;
+        this.scientificName = scientificName;
+        this.family = family;
+        this.genus = genus;
+        this.higherClassification = higherClassification;
+    }
+}

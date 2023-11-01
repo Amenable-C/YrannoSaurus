@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8471f2ea454009c296c9a6bde8e381d20c33e1558376ee21311c455fb6346789
-size 612
+import { useEffect, useState } from 'react';
+import placesGet from '../apis/place/placesGet';
+import { useRefreshCoursesStore } from '../stores/course/useRefreshCourseStore';
+
+export const useGetPlacesHook = () => {
+  const [places, setPlaces] = useState<any>([]);
+  const { shouldRefresh } = useRefreshCoursesStore();
+
+  useEffect(() => {
+    const fetchList = async () => {
+      try {
+        const data = await placesGet();
+        setPlaces(data);
+      } catch (error) {
+        // console.error('Error fetching places:', error);
+      }
+    };
+    fetchList();
+  }, [shouldRefresh]);
+
+  return places;
+};

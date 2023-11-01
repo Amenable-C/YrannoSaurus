@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:720be92fe56568cf10c9188c1df57dbb437104ad084e29db4df7886605b05d49
-size 742
+import React from 'react';
+import {
+  StyledEVBannerContainer,
+  StyledLeftContainer,
+  StyledRightContainer,
+  StyledBannerTitle,
+  StyledBannerContent,
+  StyledBannerLink,
+} from './EventVenue.styled';
+const EventVenue = () => {
+  return (
+    <StyledEVBannerContainer>
+      <StyledLeftContainer>
+        <StyledBannerTitle>행사장 안내</StyledBannerTitle>
+        <StyledBannerContent>소요 시간별 추천경로, 행사장 내 먹거리, 편의시설을 확인해보세요!</StyledBannerContent>
+      </StyledLeftContainer>
+      <StyledRightContainer>
+        <StyledBannerLink href="/Guide">행사장 안내 ➜</StyledBannerLink>
+      </StyledRightContainer>
+    </StyledEVBannerContainer>
+  );
+};
+
+export default EventVenue;

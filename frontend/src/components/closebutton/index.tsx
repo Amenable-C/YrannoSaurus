@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cccac2798033b3fc6b1c2dce36fa371d72cad4ce689277d94cc1a8946c0527a3
-size 513
+import React from 'react';
+import { StyledBackIcon, StyledCloseButton, StyledForwardIcon } from './CloseButton.styled';
+
+interface GosungCloseButtonProps {
+  onClick: () => void;
+  showSideList: boolean;
+}
+
+const GosungCloseButton: React.FC<GosungCloseButtonProps> = ({ onClick, showSideList }) => {
+  return (
+    <div>
+      <StyledCloseButton onClick={onClick}>
+        {showSideList ? <StyledBackIcon /> : <StyledForwardIcon />}
+      </StyledCloseButton>
+    </div>
+  );
+};
+export default GosungCloseButton;

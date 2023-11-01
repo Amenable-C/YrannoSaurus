@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1611719d9e24a222171272f1697a4b457e1461e5c49c9c69ac30be671261d38f
-size 1548
+import logo from './logo.svg';
+import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Expo from './pagecomponents/expopage';
+import Dinosaur from './pagecomponents/dinosaurpage';
+import Gosung from './pagecomponents/gosungpage';
+import DsDetail from './pagecomponents/dinosaurpage/components/dinosaurdetail';
+import Guide from './pagecomponents/guide';
+import NavBar from './components/navbar';
+import MainLanding from './pagecomponents/mainlanding';
+import { AnimatePresence } from 'framer-motion';
+import Animation from './components/animation';
+function App() {
+  const pathname = useLocation().pathname;
+  return (
+    <div className="App">
+      <AnimatePresence>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Animation>
+                <MainLanding />
+              </Animation>
+            }
+          />
+          <Route path="/Expo" element={<Expo />} />
+          <Route
+            path="/Dinosaur"
+            element={
+              <Animation>
+                <Dinosaur />
+              </Animation>
+            }
+          />
+          <Route
+            path="/Gosung"
+            element={
+              <Animation>
+                <Gosung />
+              </Animation>
+            }
+          />
+          <Route
+            path="/Guide"
+            element={
+              <Animation>
+                <Guide />
+              </Animation>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+export default App;
